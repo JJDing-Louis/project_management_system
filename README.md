@@ -9,6 +9,7 @@ A. Phase I Requirement:
 - Only QA can create a bug, edit a bug and delete a bug.
 - Only RD can resolve a bug.
 - Summary field and Description filed are required of a bug when QA is creating a bug.
+
 B. Phase II Requirement:
 - Adding new field Severity and Priority to a ticket.
 - Adding new type of user “PM” that can create new ticket type “Feature Request”. And only RD can mark it as resolved.
