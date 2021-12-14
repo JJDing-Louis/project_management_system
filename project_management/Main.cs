@@ -12,9 +12,20 @@ namespace project_management
 {
     public partial class Main : Form
     {
+        private Login login;
+
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+            login = new Login();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                //寫登入狀態
+            }
         }
     }
 }

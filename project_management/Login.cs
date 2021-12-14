@@ -12,6 +12,7 @@ namespace project_management
 {
     public partial class Login : Form
     {
+        //用SQLite的DB去查詢
         public Login()
         {
             InitializeComponent();

@@ -49,9 +49,10 @@ namespace project_management
             // 
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Title.Location = new System.Drawing.Point(37, 13);
+            this.lbl_Title.Location = new System.Drawing.Point(49, 16);
+            this.lbl_Title.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Title.Name = "lbl_Title";
-            this.lbl_Title.Size = new System.Drawing.Size(87, 33);
+            this.lbl_Title.Size = new System.Drawing.Size(104, 42);
             this.lbl_Title.TabIndex = 0;
             this.lbl_Title.Text = "Title :";
             // 
@@ -59,9 +60,10 @@ namespace project_management
             // 
             this.lbl_Editor.AutoSize = true;
             this.lbl_Editor.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Editor.Location = new System.Drawing.Point(27, 48);
+            this.lbl_Editor.Location = new System.Drawing.Point(36, 60);
+            this.lbl_Editor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Editor.Name = "lbl_Editor";
-            this.lbl_Editor.Size = new System.Drawing.Size(107, 33);
+            this.lbl_Editor.Size = new System.Drawing.Size(134, 42);
             this.lbl_Editor.TabIndex = 1;
             this.lbl_Editor.Text = "Editor :";
             // 
@@ -69,9 +71,10 @@ namespace project_management
             // 
             this.lbl_Severity.AutoSize = true;
             this.lbl_Severity.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Severity.Location = new System.Drawing.Point(14, 153);
+            this.lbl_Severity.Location = new System.Drawing.Point(19, 191);
+            this.lbl_Severity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Severity.Name = "lbl_Severity";
-            this.lbl_Severity.Size = new System.Drawing.Size(133, 33);
+            this.lbl_Severity.Size = new System.Drawing.Size(166, 42);
             this.lbl_Severity.TabIndex = 2;
             this.lbl_Severity.Text = "Severity :";
             // 
@@ -79,9 +82,10 @@ namespace project_management
             // 
             this.lbl_Content.AutoSize = true;
             this.lbl_Content.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Content.Location = new System.Drawing.Point(14, 188);
+            this.lbl_Content.Location = new System.Drawing.Point(19, 235);
+            this.lbl_Content.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Content.Name = "lbl_Content";
-            this.lbl_Content.Size = new System.Drawing.Size(132, 33);
+            this.lbl_Content.Size = new System.Drawing.Size(168, 42);
             this.lbl_Content.TabIndex = 3;
             this.lbl_Content.Text = "Content :";
             // 
@@ -89,9 +93,10 @@ namespace project_management
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(34, 83);
+            this.label1.Location = new System.Drawing.Point(45, 104);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 33);
+            this.label1.Size = new System.Drawing.Size(115, 42);
             this.label1.TabIndex = 4;
             this.label1.Text = "Date :";
             // 
@@ -99,18 +104,20 @@ namespace project_management
             // 
             this.lbl_Priority.AutoSize = true;
             this.lbl_Priority.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Priority.Location = new System.Drawing.Point(20, 118);
+            this.lbl_Priority.Location = new System.Drawing.Point(27, 148);
+            this.lbl_Priority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Priority.Name = "lbl_Priority";
-            this.lbl_Priority.Size = new System.Drawing.Size(121, 33);
+            this.lbl_Priority.Size = new System.Drawing.Size(149, 42);
             this.lbl_Priority.TabIndex = 5;
             this.lbl_Priority.Text = "Priority :";
             // 
             // txt_UserID
             // 
             this.txt_UserID.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_UserID.Location = new System.Drawing.Point(153, 16);
+            this.txt_UserID.Location = new System.Drawing.Point(204, 20);
+            this.txt_UserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_UserID.Name = "txt_UserID";
-            this.txt_UserID.Size = new System.Drawing.Size(657, 32);
+            this.txt_UserID.Size = new System.Drawing.Size(875, 38);
             this.txt_UserID.TabIndex = 8;
             // 
             // comboBox1
@@ -122,17 +129,19 @@ namespace project_management
             "RD",
             "QA",
             "PM"});
-            this.comboBox1.Location = new System.Drawing.Point(153, 123);
+            this.comboBox1.Location = new System.Drawing.Point(204, 154);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 32);
+            this.comboBox1.Size = new System.Drawing.Size(265, 39);
             this.comboBox1.TabIndex = 7;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(153, 54);
+            this.textBox1.Location = new System.Drawing.Point(204, 68);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 32);
+            this.textBox1.Size = new System.Drawing.Size(192, 38);
             this.textBox1.TabIndex = 10;
             // 
             // comboBox2
@@ -144,33 +153,37 @@ namespace project_management
             "RD",
             "QA",
             "PM"});
-            this.comboBox2.Location = new System.Drawing.Point(153, 158);
+            this.comboBox2.Location = new System.Drawing.Point(204, 198);
+            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 32);
+            this.comboBox2.Size = new System.Drawing.Size(265, 39);
             this.comboBox2.TabIndex = 9;
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(153, 92);
+            this.dateTimePicker1.Location = new System.Drawing.Point(204, 115);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(265, 25);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(20, 224);
+            this.richTextBox1.Location = new System.Drawing.Point(27, 280);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(821, 382);
+            this.richTextBox1.Size = new System.Drawing.Size(1093, 369);
             this.richTextBox1.TabIndex = 12;
             this.richTextBox1.Text = "";
             // 
             // btn_Report
             // 
             this.btn_Report.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Report.Location = new System.Drawing.Point(20, 613);
+            this.btn_Report.Location = new System.Drawing.Point(27, 657);
+            this.btn_Report.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Report.Name = "btn_Report";
-            this.btn_Report.Size = new System.Drawing.Size(126, 47);
+            this.btn_Report.Size = new System.Drawing.Size(168, 59);
             this.btn_Report.TabIndex = 13;
             this.btn_Report.Text = "Report";
             this.btn_Report.UseVisualStyleBackColor = true;
@@ -178,18 +191,19 @@ namespace project_management
             // btn_Cancel
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(152, 613);
+            this.btn_Cancel.Location = new System.Drawing.Point(204, 657);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(126, 47);
+            this.btn_Cancel.Size = new System.Drawing.Size(168, 59);
             this.btn_Cancel.TabIndex = 14;
-            this.btn_Cancel.Text = "Report";
+            this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
             // IssueReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(858, 716);
+            this.ClientSize = new System.Drawing.Size(1144, 735);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Report);
             this.Controls.Add(this.richTextBox1);
@@ -204,6 +218,7 @@ namespace project_management
             this.Controls.Add(this.lbl_Severity);
             this.Controls.Add(this.lbl_Editor);
             this.Controls.Add(this.lbl_Title);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "IssueReport";
             this.Text = "IssueReport";
             this.ResumeLayout(false);
