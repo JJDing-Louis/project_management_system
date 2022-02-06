@@ -29,8 +29,8 @@ namespace project_management
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btn_Login = new System.Windows.Forms.ToolStripLabel();
             this.dGV_IssueList = new System.Windows.Forms.DataGridView();
             this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Severity = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -46,6 +46,8 @@ namespace project_management
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.btn_SingUp = new System.Windows.Forms.ToolStripButton();
+            this.btn_SignIn = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_IssueList)).BeginInit();
             this.SuspendLayout();
@@ -54,20 +56,13 @@ namespace project_management
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_Login});
+            this.btn_SignIn,
+            this.btn_SingUp});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1319, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1319, 34);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // btn_Login
-            // 
-            this.btn_Login.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Login.Name = "btn_Login";
-            this.btn_Login.Size = new System.Drawing.Size(89, 35);
-            this.btn_Login.Text = "Login";
-            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
             // 
             // dGV_IssueList
             // 
@@ -83,7 +78,7 @@ namespace project_management
             this.col_Editor,
             this.col_State});
             this.dGV_IssueList.Location = new System.Drawing.Point(17, 86);
-            this.dGV_IssueList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dGV_IssueList.Margin = new System.Windows.Forms.Padding(4);
             this.dGV_IssueList.Name = "dGV_IssueList";
             this.dGV_IssueList.RowHeadersWidth = 51;
             this.dGV_IssueList.RowTemplate.Height = 24;
@@ -161,7 +156,7 @@ namespace project_management
             "Bug",
             "Feature Request"});
             this.cbo_ProjectType.Location = new System.Drawing.Point(185, 36);
-            this.cbo_ProjectType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbo_ProjectType.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_ProjectType.Name = "cbo_ProjectType";
             this.cbo_ProjectType.Size = new System.Drawing.Size(313, 39);
             this.cbo_ProjectType.TabIndex = 2;
@@ -181,7 +176,7 @@ namespace project_management
             // 
             this.btn_Add.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.Location = new System.Drawing.Point(1164, 92);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(136, 48);
             this.btn_Add.TabIndex = 4;
@@ -192,7 +187,7 @@ namespace project_management
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(1164, 155);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(136, 48);
             this.button1.TabIndex = 5;
@@ -203,7 +198,7 @@ namespace project_management
             // 
             this.button2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(1164, 218);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(136, 48);
             this.button2.TabIndex = 6;
@@ -214,12 +209,33 @@ namespace project_management
             // 
             this.button3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(1164, 280);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(136, 48);
             this.button3.TabIndex = 7;
             this.button3.Text = "Solve";
             this.button3.UseVisualStyleBackColor = true;
+            // 
+            // btn_SingUp
+            // 
+            this.btn_SingUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_SingUp.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SingUp.Image = ((System.Drawing.Image)(resources.GetObject("btn_SingUp.Image")));
+            this.btn_SingUp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_SingUp.Name = "btn_SingUp";
+            this.btn_SingUp.Size = new System.Drawing.Size(96, 31);
+            this.btn_SingUp.Text = "SignUp";
+            this.btn_SingUp.Click += new System.EventHandler(this.btn_SingUp_Click);
+            // 
+            // btn_SignIn
+            // 
+            this.btn_SignIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_SignIn.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SignIn.Image = ((System.Drawing.Image)(resources.GetObject("btn_SignIn.Image")));
+            this.btn_SignIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_SignIn.Name = "btn_SignIn";
+            this.btn_SignIn.Size = new System.Drawing.Size(92, 31);
+            this.btn_SignIn.Text = "Sign In";
             // 
             // Main
             // 
@@ -234,9 +250,11 @@ namespace project_management
             this.Controls.Add(this.cbo_ProjectType);
             this.Controls.Add(this.dGV_IssueList);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
             this.Text = "Project Management";
+            this.Shown += new System.EventHandler(this.Main_Shown);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_IssueList)).EndInit();
@@ -248,7 +266,6 @@ namespace project_management
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel btn_Login;
         private System.Windows.Forms.DataGridView dGV_IssueList;
         private System.Windows.Forms.ComboBox cbo_ProjectType;
         private System.Windows.Forms.Label lbl_ProjectType;
@@ -264,6 +281,8 @@ namespace project_management
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Authority;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Editor;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_State;
+        private System.Windows.Forms.ToolStripButton btn_SignIn;
+        private System.Windows.Forms.ToolStripButton btn_SingUp;
     }
 }
 

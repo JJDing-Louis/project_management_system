@@ -1,0 +1,45 @@
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\bin\Debug\project_management.exe.config
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\bin\Debug\project_management.exe
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\bin\Debug\project_management.pdb
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.csproj.AssemblyReference.cache
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.IssueReport.resources
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.Login.resources
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.Main.resources
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.Properties.Resources.resources
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.csproj.GenerateResource.cache
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.csproj.CoreCompileInputs.cache
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.exe
+D:\Personal-Work-Space\C# Project\project_management_system\project_management\obj\Debug\project_management.pdb
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\project_management.exe.config
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\project_management.exe
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\project_management.pdb
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\DataBase.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\MySql.Data.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Data.SQLite.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\Google.Protobuf.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\ZstdNet.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\BouncyCastle.Crypto.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\Ubiety.Dns.Core.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Memory.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Buffers.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\K4os.Compression.LZ4.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\K4os.Hash.xxHash.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Numerics.Vectors.dll
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\DataBase.pdb
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\MySql.Data.xml
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Data.SQLite.pdb
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Data.SQLite.xml
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\bin\Debug\System.Data.SQLite.dll.config
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.csproj.AssemblyReference.cache
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.exe.config
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.IssueReport.resources
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.Login.resources
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.Main.resources
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.Properties.Resources.resources
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.csproj.GenerateResource.cache
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.csproj.CoreCompileInputs.cache
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.csproj.CopyComplete
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.exe
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.pdb
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.SignUp.resources

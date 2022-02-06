@@ -42,11 +42,11 @@ namespace DataBase
                 {
                     cn.Open();
                     using (SQLiteCommand cmd = new SQLiteCommand("CREATE Table Issue_Table(" +
-                                                                                                           "Id Int,Severity varchar(20))," +
-                                                                                                            "Priority varchar(20))," +
-                                                                                                            "Date varchar(20))," +
-                                                                                                            "Title varchar(50))," +
-                                                                                                            "Authority varchar(20))," +
+                                                                                                           "Id Int,Severity varchar(20)," +
+                                                                                                            "Priority varchar(20)," +
+                                                                                                            "Date DATETIME," +
+                                                                                                            "Title varchar(50)," +
+                                                                                                            "Authority varchar(20)," +
                                                                                                             "Editor varchar(20))," +
                                                                                                              "State varchar(20)),", cn))
                     {
@@ -75,7 +75,11 @@ namespace DataBase
                 if (cn.State != System.Data.ConnectionState.Open)
                 {
                     cn.Open();
-                    using (SQLiteCommand cmd = new SQLiteCommand("CREATE Table User_Table(Authority varchar(20),User_Id varchar(50),Password varchar(50))", cn))
+                    using (SQLiteCommand cmd = new SQLiteCommand("CREATE Table User_Table(" +
+                                                                                                             "Authority varchar(20)," +
+                                                                                                             "User_Id varchar(50)," +
+                                                                                                             "Password varchar(50))",
+                                                                                                             cn))
                     {
                         cmd.ExecuteNonQuery();
                     }

@@ -43,9 +43,10 @@ namespace project_management
             // 
             this.lbl_Authority.AutoSize = true;
             this.lbl_Authority.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Authority.Location = new System.Drawing.Point(13, 13);
+            this.lbl_Authority.Location = new System.Drawing.Point(17, 16);
+            this.lbl_Authority.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Authority.Name = "lbl_Authority";
-            this.lbl_Authority.Size = new System.Drawing.Size(121, 27);
+            this.lbl_Authority.Size = new System.Drawing.Size(148, 35);
             this.lbl_Authority.TabIndex = 0;
             this.lbl_Authority.Text = "Authority :";
             // 
@@ -53,9 +54,10 @@ namespace project_management
             // 
             this.lbl_UserID.AutoSize = true;
             this.lbl_UserID.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_UserID.Location = new System.Drawing.Point(20, 49);
+            this.lbl_UserID.Location = new System.Drawing.Point(27, 61);
+            this.lbl_UserID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_UserID.Name = "lbl_UserID";
-            this.lbl_UserID.Size = new System.Drawing.Size(106, 27);
+            this.lbl_UserID.Size = new System.Drawing.Size(131, 35);
             this.lbl_UserID.TabIndex = 1;
             this.lbl_UserID.Text = "User ID :";
             // 
@@ -63,9 +65,10 @@ namespace project_management
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 89);
+            this.label1.Location = new System.Drawing.Point(11, 111);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(131, 27);
+            this.label1.Size = new System.Drawing.Size(161, 35);
             this.label1.TabIndex = 2;
             this.label1.Text = "Password :";
             // 
@@ -78,27 +81,31 @@ namespace project_management
             "RD",
             "QA",
             "PM"});
-            this.comboBox1.Location = new System.Drawing.Point(151, 5);
+            this.comboBox1.Location = new System.Drawing.Point(201, 6);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 35);
+            this.comboBox1.Size = new System.Drawing.Size(217, 43);
             this.comboBox1.TabIndex = 3;
             // 
             // btn_Confirm
             // 
             this.btn_Confirm.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Confirm.Location = new System.Drawing.Point(18, 130);
+            this.btn_Confirm.Location = new System.Drawing.Point(24, 162);
+            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Confirm.Name = "btn_Confirm";
-            this.btn_Confirm.Size = new System.Drawing.Size(126, 44);
+            this.btn_Confirm.Size = new System.Drawing.Size(168, 55);
             this.btn_Confirm.TabIndex = 4;
             this.btn_Confirm.Text = "Confirm";
             this.btn_Confirm.UseVisualStyleBackColor = true;
+            this.btn_Confirm.Click += new System.EventHandler(this.btn_Confirm_Click);
             // 
             // btn_Cancel
             // 
             this.btn_Cancel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancel.Location = new System.Drawing.Point(180, 130);
+            this.btn_Cancel.Location = new System.Drawing.Point(240, 162);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(126, 44);
+            this.btn_Cancel.Size = new System.Drawing.Size(168, 55);
             this.btn_Cancel.TabIndex = 5;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
@@ -106,24 +113,26 @@ namespace project_management
             // txt_UserID
             // 
             this.txt_UserID.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_UserID.Location = new System.Drawing.Point(151, 46);
+            this.txt_UserID.Location = new System.Drawing.Point(201, 58);
+            this.txt_UserID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_UserID.Name = "txt_UserID";
-            this.txt_UserID.Size = new System.Drawing.Size(164, 35);
+            this.txt_UserID.Size = new System.Drawing.Size(217, 42);
             this.txt_UserID.TabIndex = 6;
             // 
             // txt_Password
             // 
             this.txt_Password.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Password.Location = new System.Drawing.Point(151, 89);
+            this.txt_Password.Location = new System.Drawing.Point(201, 111);
+            this.txt_Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_Password.Name = "txt_Password";
-            this.txt_Password.Size = new System.Drawing.Size(164, 35);
+            this.txt_Password.Size = new System.Drawing.Size(217, 42);
             this.txt_Password.TabIndex = 7;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 186);
+            this.ClientSize = new System.Drawing.Size(444, 232);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_UserID);
             this.Controls.Add(this.btn_Cancel);
@@ -132,6 +141,7 @@ namespace project_management
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_UserID);
             this.Controls.Add(this.lbl_Authority);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
