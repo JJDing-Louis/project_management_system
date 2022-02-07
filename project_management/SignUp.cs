@@ -43,13 +43,22 @@ namespace project_management
         private void btn_Create_Click(object sender, EventArgs e)
         {
             Get_information(); //寫入註冊資訊
-            if (Check_Information()) //檢查註冊資訊
+            //檢查註冊資訊
+            if (Check_Information())
             {
+                //資料存在，請而外設定
                 return;
             }
             else
             {
-                Set_Information();
+                if (Set_Information())
+                {
+                    MessageBox.Show("使用者帳號已註冊!");
+                }
+                else
+                {
+                    MessageBox.Show("帳號新增異常!");
+                }
             }
         }
 
@@ -73,6 +82,8 @@ namespace project_management
         private void Authority_Initialize()
         {
             cbo_Authority.DataSource = authority_item;
+            db = new MySQL(Parameter.db_connection_string);
+            db.connectDB();
         }
 
         /// <summary>
@@ -82,7 +93,7 @@ namespace project_management
         /// <returns></returns>
         private bool Check_Information()
         {
-            if (db.searchDB(db_table, db_column_name, account))
+            if (db.searchDB_of_user_data(db_table, db_column_name, account))
             {
                 MessageBox.Show("帳號已存在，請重新命名!");
                 return true;
@@ -113,7 +124,16 @@ namespace project_management
         /// <returns></returns>
         private bool Set_Information()
         {
-            return true;
+            if (db.insertDB_of_user_data(account, name, password, authority))
+            {
+                MessageBox.Show("新增帳號成功!");
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("新增帳號失敗!");
+                return false;
+            }
         }
     }
 

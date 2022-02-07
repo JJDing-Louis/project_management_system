@@ -41,9 +41,21 @@ namespace DataBase
         /// 新增資料
         /// </summary>
         /// <returns></returns>
-        public bool insertDB()
+        public bool insertDB_of_user_data(string account, string name, string password, int user_authority)
         {
-            return true;
+            string sql_cmd = $"INSERT INTO projectmanagement_db.user_table(Account,Name,Password) VALUES (\'{account}\',\'{name}\',\'{password}\');"
+                + $"INSERT INTO projectmanagement_db.user_authority_table(User_Authority) VALUES ({user_authority});";
+            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
+            int result_row = cmd.ExecuteNonQuery();
+            if (result_row > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //加 Nlog確認
         }
 
         /// <summary>
@@ -53,12 +65,12 @@ namespace DataBase
         /// <param name="column_name">欄位名稱</param>
         /// <param name="target">搜尋目標</param>
         /// <returns>true => 有找到, false => 沒找到</returns>
-        public bool searchDB(string tabel_name, string column_name, string target)
+        public bool searchDB_of_user_data(string tabel_name, string column_name, string target)
         {
-            string sql = $"SELECT {column_name} From user_table_vt WHERE Account = {target}";
+            string sql = $"SELECT {column_name} From user_table_vt WHERE Account = \'{target}\';";
             MySqlCommand cmd = new MySqlCommand(sql, connection);
-            string result = cmd.ExecuteScalar().ToString();
-            if (result == null)
+            String result = Convert.ToString(cmd.ExecuteScalar());
+            if (!result.Equals(string.Empty))
             {
                 return true;
             }
