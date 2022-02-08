@@ -43,3 +43,4 @@ D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_m
 D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.exe
 D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.pdb
 D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.SignUp.resources
+D:\Personal-Work-Space\C# Project\C# WinForm\project_management_system\project_management\obj\Debug\project_management.UserManagement.resources

@@ -31,6 +31,8 @@ namespace project_management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btn_SignIn = new System.Windows.Forms.ToolStripButton();
+            this.btn_SingUp = new System.Windows.Forms.ToolStripButton();
             this.dGV_IssueList = new System.Windows.Forms.DataGridView();
             this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Severity = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -46,8 +48,7 @@ namespace project_management
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btn_SingUp = new System.Windows.Forms.ToolStripButton();
-            this.btn_SignIn = new System.Windows.Forms.ToolStripButton();
+            this.btn_UserManagement = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_IssueList)).BeginInit();
             this.SuspendLayout();
@@ -57,12 +58,34 @@ namespace project_management
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_SignIn,
-            this.btn_SingUp});
+            this.btn_SingUp,
+            this.btn_UserManagement});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1319, 34);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btn_SignIn
+            // 
+            this.btn_SignIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_SignIn.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SignIn.Image = ((System.Drawing.Image)(resources.GetObject("btn_SignIn.Image")));
+            this.btn_SignIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_SignIn.Name = "btn_SignIn";
+            this.btn_SignIn.Size = new System.Drawing.Size(92, 31);
+            this.btn_SignIn.Text = "Sign In";
+            // 
+            // btn_SingUp
+            // 
+            this.btn_SingUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_SingUp.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SingUp.Image = ((System.Drawing.Image)(resources.GetObject("btn_SingUp.Image")));
+            this.btn_SingUp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_SingUp.Name = "btn_SingUp";
+            this.btn_SingUp.Size = new System.Drawing.Size(96, 31);
+            this.btn_SingUp.Text = "SignUp";
+            this.btn_SingUp.Click += new System.EventHandler(this.btn_SingUp_Click);
             // 
             // dGV_IssueList
             // 
@@ -216,26 +239,16 @@ namespace project_management
             this.button3.Text = "Solve";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // btn_SingUp
+            // btn_UserManagement
             // 
-            this.btn_SingUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_SingUp.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SingUp.Image = ((System.Drawing.Image)(resources.GetObject("btn_SingUp.Image")));
-            this.btn_SingUp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_SingUp.Name = "btn_SingUp";
-            this.btn_SingUp.Size = new System.Drawing.Size(96, 31);
-            this.btn_SingUp.Text = "SignUp";
-            this.btn_SingUp.Click += new System.EventHandler(this.btn_SingUp_Click);
-            // 
-            // btn_SignIn
-            // 
-            this.btn_SignIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_SignIn.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignIn.Image = ((System.Drawing.Image)(resources.GetObject("btn_SignIn.Image")));
-            this.btn_SignIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_SignIn.Name = "btn_SignIn";
-            this.btn_SignIn.Size = new System.Drawing.Size(92, 31);
-            this.btn_SignIn.Text = "Sign In";
+            this.btn_UserManagement.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_UserManagement.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_UserManagement.Image = ((System.Drawing.Image)(resources.GetObject("btn_UserManagement.Image")));
+            this.btn_UserManagement.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_UserManagement.Name = "btn_UserManagement";
+            this.btn_UserManagement.Size = new System.Drawing.Size(203, 31);
+            this.btn_UserManagement.Text = "User Management";
+            this.btn_UserManagement.Click += new System.EventHandler(this.btn_UserManagement_Click);
             // 
             // Main
             // 
@@ -283,6 +296,7 @@ namespace project_management
         private System.Windows.Forms.DataGridViewComboBoxColumn col_State;
         private System.Windows.Forms.ToolStripButton btn_SignIn;
         private System.Windows.Forms.ToolStripButton btn_SingUp;
+        private System.Windows.Forms.ToolStripButton btn_UserManagement;
     }
 }
 

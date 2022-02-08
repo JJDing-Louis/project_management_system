@@ -16,6 +16,11 @@ namespace project_management
         private Login login;
         private MySQL mySQL;
 
+        /// <summary>
+        /// 使用者管理
+        /// </summary>
+        private UserManagement userManagement;
+
         public Main()
         {
             InitializeComponent();
@@ -39,11 +44,26 @@ namespace project_management
             }
         }
 
+        private void btn_UserManagement_Click(object sender, EventArgs e)
+        {
+            if (userManagement == null)
+            {
+                userManagement = new UserManagement();
+                userManagement.Show();
+                userManagement.Disposed += new EventHandler(UserManagement_Disposed);
+            }
+        }
+
         private void Main_Shown(object sender, EventArgs e)
         {
             mySQL = new MySQL(Parameter.db_connection_string);
 
             mySQL.connectDB();
+        }
+
+        private void UserManagement_Disposed(object sender, EventArgs e)
+        {
+            userManagement = null;
         }
     }
 }

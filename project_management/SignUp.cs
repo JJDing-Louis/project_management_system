@@ -14,7 +14,7 @@ namespace project_management
     public partial class SignUp : Form
     {
         public string account;
-        public int authority;
+        public string authority;
         public string name;
         public string password;
         private string[] authority_item = new string[] { "QA", "RD", "PM" };
@@ -113,7 +113,7 @@ namespace project_management
             account = txt_Account.Text;
             password = txt_Password.Text;
             name = txt_Name.Text;
-            authority = cbo_Authority.SelectedIndex;
+            authority = cbo_Authority.SelectedItem.ToString();
         }
 
         /// <summary>
