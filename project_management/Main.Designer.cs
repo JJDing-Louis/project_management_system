@@ -33,6 +33,7 @@ namespace project_management
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btn_SignIn = new System.Windows.Forms.ToolStripButton();
             this.btn_SingUp = new System.Windows.Forms.ToolStripButton();
+            this.btn_UserManagement = new System.Windows.Forms.ToolStripButton();
             this.dGV_IssueList = new System.Windows.Forms.DataGridView();
             this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Severity = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -48,7 +49,6 @@ namespace project_management
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.btn_UserManagement = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_IssueList)).BeginInit();
             this.SuspendLayout();
@@ -86,6 +86,17 @@ namespace project_management
             this.btn_SingUp.Size = new System.Drawing.Size(96, 31);
             this.btn_SingUp.Text = "SignUp";
             this.btn_SingUp.Click += new System.EventHandler(this.btn_SingUp_Click);
+            // 
+            // btn_UserManagement
+            // 
+            this.btn_UserManagement.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_UserManagement.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_UserManagement.Image = ((System.Drawing.Image)(resources.GetObject("btn_UserManagement.Image")));
+            this.btn_UserManagement.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_UserManagement.Name = "btn_UserManagement";
+            this.btn_UserManagement.Size = new System.Drawing.Size(193, 31);
+            this.btn_UserManagement.Text = "User Management";
+            this.btn_UserManagement.Click += new System.EventHandler(this.btn_UserManagement_Click);
             // 
             // dGV_IssueList
             // 
@@ -205,6 +216,7 @@ namespace project_management
             this.btn_Add.TabIndex = 4;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // button1
             // 
@@ -238,17 +250,6 @@ namespace project_management
             this.button3.TabIndex = 7;
             this.button3.Text = "Solve";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // btn_UserManagement
-            // 
-            this.btn_UserManagement.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_UserManagement.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_UserManagement.Image = ((System.Drawing.Image)(resources.GetObject("btn_UserManagement.Image")));
-            this.btn_UserManagement.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_UserManagement.Name = "btn_UserManagement";
-            this.btn_UserManagement.Size = new System.Drawing.Size(203, 31);
-            this.btn_UserManagement.Text = "User Management";
-            this.btn_UserManagement.Click += new System.EventHandler(this.btn_UserManagement_Click);
             // 
             // Main
             // 

@@ -39,7 +39,16 @@ namespace DataBase
         }
 
         /// <summary>
-        /// 新增資料
+        /// Issue寫入資料庫
+        /// </summary>
+        /// <returns></returns>
+        public bool insertDB_of_Issue(string Title, string Editor, string Assign, DateTime date, DateTime duedate, int Priority, int Classification, string Content)
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// 新增使用者資料
         /// </summary>
         /// <returns></returns>
         public bool insertDB_of_user_data(string account, string name, string password, string user_authority)
@@ -82,6 +91,15 @@ namespace DataBase
                 dataset = ds;
                 return true;
             }
+        }
+
+        /// <summary>
+        /// 查詢Issue
+        /// </summary>
+        /// <returns></returns>
+        public bool searchDB_from_Issue()
+        {
+            return true;
         }
 
         /// <summary>

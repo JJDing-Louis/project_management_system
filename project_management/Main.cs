@@ -13,6 +13,7 @@ namespace project_management
 {
     public partial class Main : Form
     {
+        private Issue Issue = new Issue();
         private Login login;
         private MySQL mySQL;
 
@@ -24,6 +25,16 @@ namespace project_management
         public Main()
         {
             InitializeComponent();
+        }
+
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            IssueReport issueReport = new IssueReport();
+            issueReport.Show();
+            if (issueReport.ShowDialog() == DialogResult.OK)
+            {
+                //新增Issue到資料庫
+            }
         }
 
         private void btn_Login_Click(object sender, EventArgs e)
@@ -52,6 +63,14 @@ namespace project_management
                 userManagement.Show();
                 userManagement.Disposed += new EventHandler(UserManagement_Disposed);
             }
+        }
+
+        /// <summary>
+        /// 初始化專案清單
+        /// </summary>
+        private void Init_ProjectList()
+        {
+            //Issue.SearchDB_for_Project();
         }
 
         private void Main_Shown(object sender, EventArgs e)
