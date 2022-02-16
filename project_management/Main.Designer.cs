@@ -44,11 +44,14 @@ namespace project_management
             this.col_Editor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_State = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.cbo_ProjectType = new System.Windows.Forms.ComboBox();
-            this.lbl_ProjectType = new System.Windows.Forms.Label();
+            this.lbl_Project_Type = new System.Windows.Forms.Label();
             this.btn_Add = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.lbl_Project_Name = new System.Windows.Forms.Label();
+            this.cbo_ProjectName = new System.Windows.Forms.ComboBox();
+            this.btn_CreateProject = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dGV_IssueList)).BeginInit();
             this.SuspendLayout();
@@ -189,22 +192,22 @@ namespace project_management
             "Test Case",
             "Bug",
             "Feature Request"});
-            this.cbo_ProjectType.Location = new System.Drawing.Point(185, 36);
+            this.cbo_ProjectType.Location = new System.Drawing.Point(198, 38);
             this.cbo_ProjectType.Margin = new System.Windows.Forms.Padding(4);
             this.cbo_ProjectType.Name = "cbo_ProjectType";
-            this.cbo_ProjectType.Size = new System.Drawing.Size(313, 39);
+            this.cbo_ProjectType.Size = new System.Drawing.Size(183, 39);
             this.cbo_ProjectType.TabIndex = 2;
             // 
-            // lbl_ProjectType
+            // lbl_Project_Type
             // 
-            this.lbl_ProjectType.AutoSize = true;
-            this.lbl_ProjectType.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ProjectType.Location = new System.Drawing.Point(16, 41);
-            this.lbl_ProjectType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_ProjectType.Name = "lbl_ProjectType";
-            this.lbl_ProjectType.Size = new System.Drawing.Size(158, 32);
-            this.lbl_ProjectType.TabIndex = 3;
-            this.lbl_ProjectType.Text = "ProjectType";
+            this.lbl_Project_Type.AutoSize = true;
+            this.lbl_Project_Type.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Project_Type.Location = new System.Drawing.Point(16, 41);
+            this.lbl_Project_Type.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Project_Type.Name = "lbl_Project_Type";
+            this.lbl_Project_Type.Size = new System.Drawing.Size(174, 32);
+            this.lbl_Project_Type.TabIndex = 3;
+            this.lbl_Project_Type.Text = "ProjectType :";
             // 
             // btn_Add
             // 
@@ -251,16 +254,54 @@ namespace project_management
             this.button3.Text = "Solve";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // lbl_Project_Name
+            // 
+            this.lbl_Project_Name.AutoSize = true;
+            this.lbl_Project_Name.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Project_Name.Location = new System.Drawing.Point(389, 41);
+            this.lbl_Project_Name.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Project_Name.Name = "lbl_Project_Name";
+            this.lbl_Project_Name.Size = new System.Drawing.Size(194, 32);
+            this.lbl_Project_Name.TabIndex = 8;
+            this.lbl_Project_Name.Text = "Project Name :";
+            // 
+            // cbo_ProjectName
+            // 
+            this.cbo_ProjectName.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_ProjectName.FormattingEnabled = true;
+            this.cbo_ProjectName.Items.AddRange(new object[] {
+            "Test Case",
+            "Bug",
+            "Feature Request"});
+            this.cbo_ProjectName.Location = new System.Drawing.Point(591, 38);
+            this.cbo_ProjectName.Margin = new System.Windows.Forms.Padding(4);
+            this.cbo_ProjectName.Name = "cbo_ProjectName";
+            this.cbo_ProjectName.Size = new System.Drawing.Size(263, 39);
+            this.cbo_ProjectName.TabIndex = 9;
+            // 
+            // btn_CreateProject
+            // 
+            this.btn_CreateProject.Font = new System.Drawing.Font("Arial Narrow", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CreateProject.Location = new System.Drawing.Point(861, 38);
+            this.btn_CreateProject.Name = "btn_CreateProject";
+            this.btn_CreateProject.Size = new System.Drawing.Size(172, 38);
+            this.btn_CreateProject.TabIndex = 10;
+            this.btn_CreateProject.Text = "Create Project";
+            this.btn_CreateProject.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 669);
+            this.Controls.Add(this.btn_CreateProject);
+            this.Controls.Add(this.cbo_ProjectName);
+            this.Controls.Add(this.lbl_Project_Name);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.lbl_ProjectType);
+            this.Controls.Add(this.lbl_Project_Type);
             this.Controls.Add(this.cbo_ProjectType);
             this.Controls.Add(this.dGV_IssueList);
             this.Controls.Add(this.toolStrip1);
@@ -282,7 +323,7 @@ namespace project_management
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.DataGridView dGV_IssueList;
         private System.Windows.Forms.ComboBox cbo_ProjectType;
-        private System.Windows.Forms.Label lbl_ProjectType;
+        private System.Windows.Forms.Label lbl_Project_Type;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
@@ -298,6 +339,9 @@ namespace project_management
         private System.Windows.Forms.ToolStripButton btn_SignIn;
         private System.Windows.Forms.ToolStripButton btn_SingUp;
         private System.Windows.Forms.ToolStripButton btn_UserManagement;
+        private System.Windows.Forms.Label lbl_Project_Name;
+        private System.Windows.Forms.ComboBox cbo_ProjectName;
+        private System.Windows.Forms.Button btn_CreateProject;
     }
 }
 

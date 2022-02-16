@@ -16,6 +16,16 @@ namespace project_management
         private Issue Issue = new Issue();
         private Login login;
         private MySQL mySQL;
+        private bool Init_Result = false;
+
+        enum Project_Classification
+        {
+            Develop,
+            Bug,
+            Check,
+        }
+
+        string[] project_type = new string[] { "Develop", "Bug", "Check" };
 
         /// <summary>
         /// 使用者管理
@@ -73,10 +83,25 @@ namespace project_management
             //Issue.SearchDB_for_Project();
         }
 
+        /// <summary>
+        /// UI初始化
+        /// </summary>
+        /// <returns></returns>
+        private void Init_UI() 
+        {
+            //cbo_project_type初始化
+            cbo_ProjectType.DataSource = project_type;
+            //cbo_project_name初始化(從資料庫抓)
+        }
+
         private void Main_Shown(object sender, EventArgs e)
         {
-            mySQL = new MySQL(Parameter.db_connection_string);
+            //初始化UI
+            Init_UI();
+            //初始化專案清單(根據登陸的人，並顯示被分配的專案)
+            Init_ProjectList();
 
+            mySQL = new MySQL(Parameter.db_connection_string);
             mySQL.connectDB();
         }
 
