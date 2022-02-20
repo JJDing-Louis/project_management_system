@@ -31,8 +31,8 @@ namespace project_management
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.btn_SignIn = new System.Windows.Forms.ToolStripButton();
-            this.btn_SingUp = new System.Windows.Forms.ToolStripButton();
+            this.btn_LogIn = new System.Windows.Forms.ToolStripButton();
+            this.btn_Logout = new System.Windows.Forms.ToolStripButton();
             this.btn_UserManagement = new System.Windows.Forms.ToolStripButton();
             this.dGV_IssueList = new System.Windows.Forms.DataGridView();
             this.col_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,9 +46,9 @@ namespace project_management
             this.cbo_ProjectType = new System.Windows.Forms.ComboBox();
             this.lbl_Project_Type = new System.Windows.Forms.Label();
             this.btn_Add = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_Modify = new System.Windows.Forms.Button();
+            this.btn_Remove = new System.Windows.Forms.Button();
+            this.btn_Solve = new System.Windows.Forms.Button();
             this.lbl_Project_Name = new System.Windows.Forms.Label();
             this.cbo_ProjectName = new System.Windows.Forms.ComboBox();
             this.btn_CreateProject = new System.Windows.Forms.Button();
@@ -60,35 +60,36 @@ namespace project_management
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_SignIn,
-            this.btn_SingUp,
+            this.btn_LogIn,
+            this.btn_Logout,
             this.btn_UserManagement});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1319, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(1314, 34);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // btn_SignIn
+            // btn_LogIn
             // 
-            this.btn_SignIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_SignIn.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SignIn.Image = ((System.Drawing.Image)(resources.GetObject("btn_SignIn.Image")));
-            this.btn_SignIn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_SignIn.Name = "btn_SignIn";
-            this.btn_SignIn.Size = new System.Drawing.Size(92, 31);
-            this.btn_SignIn.Text = "Sign In";
+            this.btn_LogIn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_LogIn.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LogIn.Image = ((System.Drawing.Image)(resources.GetObject("btn_LogIn.Image")));
+            this.btn_LogIn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_LogIn.Name = "btn_LogIn";
+            this.btn_LogIn.Size = new System.Drawing.Size(82, 31);
+            this.btn_LogIn.Text = "Log in";
+            this.btn_LogIn.Click += new System.EventHandler(this.btn_LogIn_Click_1);
             // 
-            // btn_SingUp
+            // btn_Logout
             // 
-            this.btn_SingUp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_SingUp.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SingUp.Image = ((System.Drawing.Image)(resources.GetObject("btn_SingUp.Image")));
-            this.btn_SingUp.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_SingUp.Name = "btn_SingUp";
-            this.btn_SingUp.Size = new System.Drawing.Size(96, 31);
-            this.btn_SingUp.Text = "SignUp";
-            this.btn_SingUp.Click += new System.EventHandler(this.btn_SingUp_Click);
+            this.btn_Logout.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_Logout.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Logout.Image = ((System.Drawing.Image)(resources.GetObject("btn_Logout.Image")));
+            this.btn_Logout.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_Logout.Name = "btn_Logout";
+            this.btn_Logout.Size = new System.Drawing.Size(97, 31);
+            this.btn_Logout.Text = "Log out";
+            this.btn_Logout.Click += new System.EventHandler(this.btn_LogOut_Click);
             // 
             // btn_UserManagement
             // 
@@ -221,38 +222,41 @@ namespace project_management
             this.btn_Add.UseVisualStyleBackColor = true;
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
-            // button1
+            // btn_Modify
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1164, 155);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(136, 48);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Modify";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Modify.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modify.Location = new System.Drawing.Point(1164, 155);
+            this.btn_Modify.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Modify.Name = "btn_Modify";
+            this.btn_Modify.Size = new System.Drawing.Size(136, 48);
+            this.btn_Modify.TabIndex = 5;
+            this.btn_Modify.Text = "Modify";
+            this.btn_Modify.UseVisualStyleBackColor = true;
+            this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
-            // button2
+            // btn_Remove
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1164, 218);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 48);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_Remove.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Remove.Location = new System.Drawing.Point(1164, 218);
+            this.btn_Remove.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Remove.Name = "btn_Remove";
+            this.btn_Remove.Size = new System.Drawing.Size(136, 48);
+            this.btn_Remove.TabIndex = 6;
+            this.btn_Remove.Text = "Remove";
+            this.btn_Remove.UseVisualStyleBackColor = true;
+            this.btn_Remove.Click += new System.EventHandler(this.btn_Remove_Click);
             // 
-            // button3
+            // btn_Solve
             // 
-            this.button3.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(1164, 280);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 48);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "Solve";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_Solve.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Solve.Location = new System.Drawing.Point(1164, 280);
+            this.btn_Solve.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Solve.Name = "btn_Solve";
+            this.btn_Solve.Size = new System.Drawing.Size(136, 48);
+            this.btn_Solve.TabIndex = 7;
+            this.btn_Solve.Text = "Solve";
+            this.btn_Solve.UseVisualStyleBackColor = true;
+            this.btn_Solve.Click += new System.EventHandler(this.btn_Solve_Click);
             // 
             // lbl_Project_Name
             // 
@@ -288,18 +292,19 @@ namespace project_management
             this.btn_CreateProject.TabIndex = 10;
             this.btn_CreateProject.Text = "Create Project";
             this.btn_CreateProject.UseVisualStyleBackColor = true;
+            this.btn_CreateProject.Click += new System.EventHandler(this.btn_CreateProject_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1319, 669);
+            this.ClientSize = new System.Drawing.Size(1314, 669);
             this.Controls.Add(this.btn_CreateProject);
             this.Controls.Add(this.cbo_ProjectName);
             this.Controls.Add(this.lbl_Project_Name);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Solve);
+            this.Controls.Add(this.btn_Remove);
+            this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.lbl_Project_Type);
             this.Controls.Add(this.cbo_ProjectType);
@@ -325,9 +330,9 @@ namespace project_management
         private System.Windows.Forms.ComboBox cbo_ProjectType;
         private System.Windows.Forms.Label lbl_Project_Type;
         private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_Modify;
+        private System.Windows.Forms.Button btn_Remove;
+        private System.Windows.Forms.Button btn_Solve;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ID;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_Severity;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_Priority;
@@ -336,12 +341,12 @@ namespace project_management
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Authority;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Editor;
         private System.Windows.Forms.DataGridViewComboBoxColumn col_State;
-        private System.Windows.Forms.ToolStripButton btn_SignIn;
-        private System.Windows.Forms.ToolStripButton btn_SingUp;
+        private System.Windows.Forms.ToolStripButton btn_Logout;
         private System.Windows.Forms.ToolStripButton btn_UserManagement;
         private System.Windows.Forms.Label lbl_Project_Name;
         private System.Windows.Forms.ComboBox cbo_ProjectName;
         private System.Windows.Forms.Button btn_CreateProject;
+        private System.Windows.Forms.ToolStripButton btn_LogIn;
     }
 }
 

@@ -1,7 +1,7 @@
 ﻿
 namespace project_management
 {
-    partial class SignUp
+    partial class UserForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@ namespace project_management
             this.txt_Password = new System.Windows.Forms.TextBox();
             this.txt_Account = new System.Windows.Forms.TextBox();
             this.btn_Cancel = new System.Windows.Forms.Button();
-            this.btn_Create = new System.Windows.Forms.Button();
+            this.btn_OK = new System.Windows.Forms.Button();
             this.cbo_Authority = new System.Windows.Forms.ComboBox();
             this.lbl_Password = new System.Windows.Forms.Label();
             this.lbl_Account = new System.Windows.Forms.Label();
@@ -70,17 +70,17 @@ namespace project_management
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.UseVisualStyleBackColor = true;
             // 
-            // btn_Create
+            // btn_OK
             // 
-            this.btn_Create.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Create.Location = new System.Drawing.Point(8, 245);
-            this.btn_Create.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Create.Name = "btn_Create";
-            this.btn_Create.Size = new System.Drawing.Size(168, 55);
-            this.btn_Create.TabIndex = 12;
-            this.btn_Create.Text = "Create";
-            this.btn_Create.UseVisualStyleBackColor = true;
-            this.btn_Create.Click += new System.EventHandler(this.btn_Create_Click);
+            this.btn_OK.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_OK.Location = new System.Drawing.Point(21, 245);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_OK.Name = "btn_OK";
+            this.btn_OK.Size = new System.Drawing.Size(168, 55);
+            this.btn_OK.TabIndex = 12;
+            this.btn_OK.Text = "OK";
+            this.btn_OK.UseVisualStyleBackColor = true;
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // cbo_Authority
             // 
@@ -150,7 +150,7 @@ namespace project_management
             this.lbl_Name.TabIndex = 16;
             this.lbl_Name.Text = "Name :";
             // 
-            // SignUp
+            // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,14 +160,13 @@ namespace project_management
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_Account);
             this.Controls.Add(this.btn_Cancel);
-            this.Controls.Add(this.btn_Create);
+            this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.cbo_Authority);
             this.Controls.Add(this.lbl_Password);
             this.Controls.Add(this.lbl_Account);
             this.Controls.Add(this.lbl_Authority);
-            this.Name = "SignUp";
+            this.Name = "UserForm";
             this.Text = "SignUp";
-            this.Shown += new System.EventHandler(this.SignUp_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,7 +177,7 @@ namespace project_management
         private System.Windows.Forms.TextBox txt_Password;
         private System.Windows.Forms.TextBox txt_Account;
         private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.Button btn_Create;
+        private System.Windows.Forms.Button btn_OK;
         private System.Windows.Forms.ComboBox cbo_Authority;
         private System.Windows.Forms.Label lbl_Password;
         private System.Windows.Forms.Label lbl_Account;

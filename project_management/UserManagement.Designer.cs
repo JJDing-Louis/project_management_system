@@ -31,8 +31,9 @@ namespace project_management
         {
             this.lbl_UserList = new System.Windows.Forms.Label();
             this.dgv_UserTable = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Modify = new System.Windows.Forms.Button();
             this.btn_Delete = new System.Windows.Forms.Button();
+            this.btn_Add = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_UserTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@ namespace project_management
             this.lbl_UserList.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_UserList.Location = new System.Drawing.Point(13, 13);
             this.lbl_UserList.Name = "lbl_UserList";
-            this.lbl_UserList.Size = new System.Drawing.Size(116, 26);
+            this.lbl_UserList.Size = new System.Drawing.Size(110, 25);
             this.lbl_UserList.TabIndex = 0;
             this.lbl_UserList.Text = "User List :";
             // 
@@ -57,33 +58,46 @@ namespace project_management
             this.dgv_UserTable.Size = new System.Drawing.Size(696, 481);
             this.dgv_UserTable.TabIndex = 1;
             // 
-            // button1
+            // btn_Modify
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(715, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(109, 43);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Modify";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_Modify.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modify.Location = new System.Drawing.Point(715, 91);
+            this.btn_Modify.Name = "btn_Modify";
+            this.btn_Modify.Size = new System.Drawing.Size(109, 43);
+            this.btn_Modify.TabIndex = 2;
+            this.btn_Modify.Text = "Modify";
+            this.btn_Modify.UseVisualStyleBackColor = true;
+            this.btn_Modify.Click += new System.EventHandler(this.btn_Modify_Click);
             // 
             // btn_Delete
             // 
             this.btn_Delete.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Delete.Location = new System.Drawing.Point(715, 92);
+            this.btn_Delete.Location = new System.Drawing.Point(715, 140);
             this.btn_Delete.Name = "btn_Delete";
             this.btn_Delete.Size = new System.Drawing.Size(109, 43);
             this.btn_Delete.TabIndex = 3;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
             // 
+            // btn_Add
+            // 
+            this.btn_Add.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Add.Location = new System.Drawing.Point(715, 42);
+            this.btn_Add.Name = "btn_Add";
+            this.btn_Add.Size = new System.Drawing.Size(109, 43);
+            this.btn_Add.TabIndex = 4;
+            this.btn_Add.Text = "Add";
+            this.btn_Add.UseVisualStyleBackColor = true;
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 546);
+            this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.btn_Delete);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Modify);
             this.Controls.Add(this.dgv_UserTable);
             this.Controls.Add(this.lbl_UserList);
             this.Name = "UserManagement";
@@ -99,7 +113,8 @@ namespace project_management
 
         private System.Windows.Forms.Label lbl_UserList;
         private System.Windows.Forms.DataGridView dgv_UserTable;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Modify;
         private System.Windows.Forms.Button btn_Delete;
+        private System.Windows.Forms.Button btn_Add;
     }
 }

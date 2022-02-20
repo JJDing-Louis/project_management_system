@@ -21,6 +21,8 @@ namespace DataBase
             connection = new MySqlConnection(connect_string);
         }
 
+        #region 資料庫連線相關
+
         /// <summary>
         /// 連接資料庫
         /// </summary>
@@ -38,20 +40,37 @@ namespace DataBase
             }
         }
 
+        #endregion 資料庫連線相關
+
+        #region User操作相關
+
         /// <summary>
-        /// Issue寫入資料庫
+        /// 刪除使用者資料
         /// </summary>
+        /// <param name="table_name"></param>
+        /// <param name="account"></param>
         /// <returns></returns>
-        public bool insertDB_of_Issue(string Title, string Editor, string Assign, DateTime date, DateTime duedate, int Priority, int Classification, string Content)
+        public bool delete_user_table_of_DB(string table_name, string account)
         {
-            return true;
+            string sql_cmd = $"DELETE FROM \'{table_name}\' WHERE Account = \'{account}\';";
+            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
+            int result_row = cmd.ExecuteNonQuery();
+            if (result_row > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //加 NLog確認
         }
 
         /// <summary>
-        /// 新增使用者資料
+        /// 新增使用者資料(user authority改數字)
         /// </summary>
         /// <returns></returns>
-        public bool insertDB_of_user_data(string account, string name, string password, string user_authority)
+        public bool insert_user_table_of_DB(string account, string name, string password, int user_authority)
         {
             string sql_cmd = $"INSERT INTO projectmanagement_db.user_table(Account,Name,Password) VALUES (\'{account}\',\'{name}\',\'{password}\');"
                 + $"INSERT INTO projectmanagement_db.user_authority_table(User_Authority) VALUES (\'{user_authority}\');";
@@ -69,11 +88,33 @@ namespace DataBase
         }
 
         /// <summary>
-        /// 搜尋使用者資料表
+        /// 檢查使用者資料表的資訊
+        /// </summary>
+        /// <param name="tabel_name">表單名稱</param>
+        /// <param name="column_name">欄位名稱</param>
+        /// <param name="target">搜尋目標</param>
+        /// <returns>true => 有找到, false => 沒找到</returns>
+        public bool search_user_table_of_DB(string tabel_name, string column_name, string target)
+        {
+            string sql = $"SELECT {column_name} From user_table_vt WHERE Account = \'{target}\';";
+            MySqlCommand cmd = new MySqlCommand(sql, connection);
+            String result = Convert.ToString(cmd.ExecuteScalar());
+            if (!result.Equals(string.Empty))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// 搜尋所有使用者資料表
         /// </summary>
         /// <param name="users_table"></param>
         /// <returns></returns>
-        public bool searchDB_All_user(out DataSet dataset)
+        public bool search_users_table_of_DB(out DataSet dataset)
         {
             DataSet ds = new DataSet();
             string sql_cmd = $"SELECT Account, Name, Authority FROM projectmanagement_db.user_table_vt;";
@@ -94,6 +135,39 @@ namespace DataBase
         }
 
         /// <summary>
+        /// 修改使用者全縣資訊
+        /// </summary>
+        /// <returns></returns>
+        public bool update_user_table_of_DB(string table_name, string account, string name, string password, int user_authority)
+        {
+            string sql_cmd = $"UPDATE {table_name} SET Password = \'{password}\', Authority = \'{user_authority}\' WHERE Account = \'{account}\';";
+            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
+            int result_row = cmd.ExecuteNonQuery();
+            if (result_row > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //加 NLog確認
+        }
+
+        #endregion User操作相關
+
+        #region Issue 操作相關
+
+        /// <summary>
+        /// Issue寫入資料庫
+        /// </summary>
+        /// <returns></returns>
+        public bool insertDB_of_Issue(string Title, string Editor, string Assign, DateTime date, DateTime duedate, int Priority, int Classification, string Content)
+        {
+            return true;
+        }
+
+        /// <summary>
         /// 查詢Issue
         /// </summary>
         /// <returns></returns>
@@ -102,26 +176,6 @@ namespace DataBase
             return true;
         }
 
-        /// <summary>
-        /// 檢查使用者資料表的資訊
-        /// </summary>
-        /// <param name="tabel_name">表單名稱</param>
-        /// <param name="column_name">欄位名稱</param>
-        /// <param name="target">搜尋目標</param>
-        /// <returns>true => 有找到, false => 沒找到</returns>
-        public bool searchDB_of_user_data(string tabel_name, string column_name, string target)
-        {
-            string sql = $"SELECT {column_name} From user_table_vt WHERE Account = \'{target}\';";
-            MySqlCommand cmd = new MySqlCommand(sql, connection);
-            String result = Convert.ToString(cmd.ExecuteScalar());
-            if (!result.Equals(string.Empty))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        #endregion Issue 操作相關
     }
 }

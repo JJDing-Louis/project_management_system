@@ -20,12 +20,24 @@ namespace project_management
             InitializeComponent();
         }
 
+        private void btn_Add_Click(object sender, EventArgs e)
+        {
+            UserForm signUp = new UserForm();
+            signUp.Show();
+        }
+
+        private void btn_Modify_Click(object sender, EventArgs e)
+        {
+            UserForm signUp = new UserForm();
+            signUp.Show();
+        }
+
         /// <summary>
         /// 載入所有使用者資訊
         /// </summary>
         private void Load_Users_Infomation()
         {
-            if (db.searchDB_All_user(out DataSet users_dataset))
+            if (db.search_users_table_of_DB(out DataSet users_dataset))
             {
                 dgv_UserTable.DataSource = users_dataset;
                 dgv_UserTable.DataMember = "Users_Table";

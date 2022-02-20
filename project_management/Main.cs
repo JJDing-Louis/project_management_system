@@ -13,19 +13,11 @@ namespace project_management
 {
     public partial class Main : Form
     {
+        private bool Init_Result = false;
         private Issue Issue = new Issue();
         private Login login;
         private MySQL mySQL;
-        private bool Init_Result = false;
-
-        enum Project_Classification
-        {
-            Develop,
-            Bug,
-            Check,
-        }
-
-        string[] project_type = new string[] { "Develop", "Bug", "Check" };
+        private string[] project_type = new string[] { "Develop", "Bug", "Check" };
 
         /// <summary>
         /// 使用者管理
@@ -35,6 +27,13 @@ namespace project_management
         public Main()
         {
             InitializeComponent();
+        }
+
+        private enum Project_Classification
+        {
+            Develop,
+            Bug,
+            Check,
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
@@ -47,6 +46,12 @@ namespace project_management
             }
         }
 
+        private void btn_CreateProject_Click(object sender, EventArgs e)
+        {
+            ProjectForm projectForm = new ProjectForm();
+            projectForm.Show();
+        }
+
         private void btn_Login_Click(object sender, EventArgs e)
         {
             login = new Login();
@@ -56,13 +61,43 @@ namespace project_management
             }
         }
 
-        private void btn_SingUp_Click(object sender, EventArgs e)
+        private void btn_LogIn_Click_1(object sender, EventArgs e)
         {
-            SignUp signUp = new SignUp();
+        }
+
+        /// <summary>
+        /// 登出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_LogOut_Click(object sender, EventArgs e)
+        {
+            UserForm signUp = new UserForm();
             if (signUp.ShowDialog() == DialogResult.OK)
             {
                 //編輯動作
             }
+        }
+
+        private void btn_Modify_Click(object sender, EventArgs e)
+        {
+            //根據選擇的DataGridView進行搜尋(Search Issue)
+            //搜尋完後讀取Form，進行修改
+            //呼叫IssueReportForm
+            IssueReport issueReport = new IssueReport();
+            issueReport.Show();
+            if (issueReport.DialogResult.Equals(DialogResult.OK))
+            {
+                //撰寫修改報告內容
+            }
+        }
+
+        private void btn_Remove_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_Solve_Click(object sender, EventArgs e)
+        {
         }
 
         private void btn_UserManagement_Click(object sender, EventArgs e)
@@ -87,7 +122,7 @@ namespace project_management
         /// UI初始化
         /// </summary>
         /// <returns></returns>
-        private void Init_UI() 
+        private void Init_UI()
         {
             //cbo_project_type初始化
             cbo_ProjectType.DataSource = project_type;
@@ -105,6 +140,11 @@ namespace project_management
             mySQL.connectDB();
         }
 
+        /// <summary>
+        /// 釋放UserManagement表單資源
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void UserManagement_Disposed(object sender, EventArgs e)
         {
             userManagement = null;
