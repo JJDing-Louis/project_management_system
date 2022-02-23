@@ -45,56 +45,13 @@ namespace DataBase
         #region User操作相關
 
         /// <summary>
-        /// 刪除使用者資料
+        /// 檢查使用者資料是否存在
         /// </summary>
-        /// <param name="table_name"></param>
-        /// <param name="account"></param>
+        /// <param name="tabel_name"></param>
+        /// <param name="column_name"></param>
+        /// <param name="target"></param>
         /// <returns></returns>
-        public bool delete_user_table_of_DB(string table_name, string account)
-        {
-            string sql_cmd = $"DELETE FROM \'{table_name}\' WHERE Account = \'{account}\';";
-            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
-            int result_row = cmd.ExecuteNonQuery();
-            if (result_row > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            //加 NLog確認
-        }
-
-        /// <summary>
-        /// 新增使用者資料(user authority改數字)
-        /// </summary>
-        /// <returns></returns>
-        public bool insert_user_table_of_DB(string account, string name, string password, int user_authority)
-        {
-            string sql_cmd = $"INSERT INTO projectmanagement_db.user_table(Account,Name,Password) VALUES (\'{account}\',\'{name}\',\'{password}\');"
-                + $"INSERT INTO projectmanagement_db.user_authority_table(User_Authority) VALUES (\'{user_authority}\');";
-            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
-            int result_row = cmd.ExecuteNonQuery();
-            if (result_row > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-            //加 Nlog確認
-        }
-
-        /// <summary>
-        /// 檢查使用者資料表的資訊
-        /// </summary>
-        /// <param name="tabel_name">表單名稱</param>
-        /// <param name="column_name">欄位名稱</param>
-        /// <param name="target">搜尋目標</param>
-        /// <returns>true => 有找到, false => 沒找到</returns>
-        public bool search_user_table_of_DB(string tabel_name, string column_name, string target)
+        public bool check_user_table_of_DB(string tabel_name, string column_name, string target)
         {
             string sql = $"SELECT {column_name} From user_table_vt WHERE Account = \'{target}\';";
             MySqlCommand cmd = new MySqlCommand(sql, connection);
@@ -110,14 +67,86 @@ namespace DataBase
         }
 
         /// <summary>
+        /// 刪除使用者資料(無法進行多表視圖的資料刪除，需修改)
+        /// </summary>
+        /// <param name="table_name"></param>
+        /// <param name="account"></param>
+        /// <returns></returns>
+        public bool delete_user_table_of_DB(string table_name, string account)
+        {
+            string sql_cmd = $"DELETE FROM {table_name} WHERE Account = \'{account}\';";
+            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
+            int result_row = cmd.ExecuteNonQuery();
+            if (result_row > 0)
+            {
+                //刪除成功
+                return true;
+            }
+            else
+            {
+                //刪除失敗
+                return false;
+            }
+            //加 NLog確認
+        }
+
+        /// <summary>
+        /// 新增使用者資料(user authority改數字)
+        /// </summary>
+        /// <returns></returns>
+        public bool insert_user_table_of_DB(string account, string name, string password, int user_authority)
+        {
+            string sql_cmd = $"INSERT INTO projectmanagement_db.user_table(Account,Name,Password,Authority) VALUES (\'{account}\',\'{name}\',\'{password}\',\'{user_authority}\');";
+            MySqlCommand cmd = new MySqlCommand(sql_cmd, connection);
+            int result_row = cmd.ExecuteNonQuery();
+            if (result_row > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            //加 Nlog確認
+        }
+
+        /// <summary>
+        /// 尋找使用者資料表的資訊
+        /// </summary>
+        /// <param name="tabel_name">表單名稱</param>
+        /// <param name="column_name">欄位名稱</param>
+        /// <param name="target">搜尋目標</param>
+        /// <returns>true => 有找到, false => 沒找到</returns>
+        public bool search_user_table_of_DB(string tabel_name, string target, out string search_result)
+        {
+            string sql = $"SELECT * From user_table WHERE Account = \'{target}\';";
+            MySqlCommand cmd = new MySqlCommand(sql, connection);
+            MySqlDataReader sdr = cmd.ExecuteReader();
+            //取得資料回傳(記得修改)
+
+            //String result = Convert.ToString(cmd.ExecuteScalar());
+            String result = string.Empty;
+            if (!result.Equals(string.Empty))
+            {
+                search_result = result;
+                return true;
+            }
+            else
+            {
+                search_result = string.Empty;
+                return false;
+            }
+        }
+
+        /// <summary>
         /// 搜尋所有使用者資料表
         /// </summary>
         /// <param name="users_table"></param>
         /// <returns></returns>
-        public bool search_users_table_of_DB(out DataSet dataset)
+        public bool search_users_table_of_DB(string user_table, out DataSet dataset)
         {
             DataSet ds = new DataSet();
-            string sql_cmd = $"SELECT Account, Name, Authority FROM projectmanagement_db.user_table_vt;";
+            string sql_cmd = $"SELECT * FROM {user_table};";
             MySqlDataAdapter db_DataAdapter = new MySqlDataAdapter(sql_cmd, connection);
             db_DataAdapter.Fill(ds, "Users_Table");
             //users_table = ds.Tables["Users_Table"];
@@ -135,7 +164,7 @@ namespace DataBase
         }
 
         /// <summary>
-        /// 修改使用者全縣資訊
+        /// 修改使用者權限資訊
         /// </summary>
         /// <returns></returns>
         public bool update_user_table_of_DB(string table_name, string account, string name, string password, int user_authority)

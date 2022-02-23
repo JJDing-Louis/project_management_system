@@ -35,7 +35,7 @@ namespace project_management
         }
 
         /// <summary>
-        /// 建構子初始化(修改User)
+        /// 建構子初始化(修改User的流程)
         /// </summary>
         /// <param name="user_information"></param>
         public UserForm(User user_information)
@@ -46,6 +46,11 @@ namespace project_management
             Load_Information(user_information);
         }
 
+        /// <summary>
+        /// 按下OK的執行動作
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btn_OK_Click(object sender, EventArgs e)
         {
             ///modify_flag = true (修改資料) false(建立資料)
@@ -54,7 +59,9 @@ namespace project_management
                 //修改使用者資料
                 //取得UI資訊
                 Get_information();
+                //思考是否需要防出錯?
                 user.Update_User(user);
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -94,7 +101,7 @@ namespace project_management
         /// <returns></returns>
         private bool Check_Information()
         {
-            if (user.Search_User(user))
+            if (user.Check_User(user))
             {
                 MessageBox.Show("帳號已存在，請重新命名!");
                 return true;
@@ -132,7 +139,7 @@ namespace project_management
         /// <returns></returns>
         private bool Load_Information(User user_informaiton)
         {
-            if (user_informaiton.Search_User(user_informaiton))
+            if (user_informaiton.Search_User(user_informaiton, out User search_result))
             {
                 txt_Account.Text = user_informaiton.account;
                 txt_Password.Text = user_informaiton.password;

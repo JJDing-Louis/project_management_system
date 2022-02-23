@@ -57,6 +57,7 @@ namespace project_management
             this.dgv_UserTable.RowTemplate.Height = 27;
             this.dgv_UserTable.Size = new System.Drawing.Size(696, 481);
             this.dgv_UserTable.TabIndex = 1;
+            this.dgv_UserTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_UserTable_CellClick);
             // 
             // btn_Modify
             // 
@@ -78,6 +79,7 @@ namespace project_management
             this.btn_Delete.TabIndex = 3;
             this.btn_Delete.Text = "Delete";
             this.btn_Delete.UseVisualStyleBackColor = true;
+            this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
             // 
             // btn_Add
             // 
